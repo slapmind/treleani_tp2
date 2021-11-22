@@ -8,6 +8,8 @@ class Ludovica_tp2 {
 		int juego, c1, c2, c3, punt= 0, tot;
 		String anim;
 		
+		//Trabajo Practico 2
+		
 		juego = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el juego que quiere jugar: \n1- Tarot "
 				+ "\n2- Test de Personalidad \n3- Prediccion 2021/2022"));
 				
