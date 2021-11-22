@@ -5,8 +5,9 @@ import javax.swing.*;
 class Ludovica_tp2 {
 
 	public static void main(String[] args) {
-		int juego, c1, c2, c3, punt= 0, tot;
+		int juego, c1, c2, c3, punt= 0, tot, carta;
 		String anim;
+		
 		do {
 		juego = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el juego que quiere jugar: \n1- Tarot "
 					+ "\n2- Test de Personalidad \n3- Prediccion 2021/2022"));
@@ -238,7 +239,42 @@ class Ludovica_tp2 {
 				tot = punt;
 				JOptionPane.showMessageDialog(null, "Tu puntaje es: " + tot);	
 				break;
-		case 3:JOptionPane.showMessageDialog(null, "Todavia no existe el juego 3");
+		case 3: JOptionPane.showMessageDialog(null, "Vamos a ver que dice Baba Vanga sobre tu futuro.");
+				
+				carta=(int)(Math.random() * 6 + 1);
+		
+				if (carta==1) {
+					JOptionPane.showMessageDialog(null, "El viaje"
+							+ "\nGracias al esfuerzo que has realizado en este año vas a poder realizar ese viaje"
+							+ "\nque tanto querias. Asi que ahora a disfrutar", "Test de Personalidad",
+							JOptionPane.DEFAULT_OPTION, new ImageIcon(Ludovica_tp2.class.getResource("/img/pred1.jpg")));
+				} else if (carta==2) {
+					JOptionPane.showMessageDialog(null, "El trabajo"
+							+ "\nHace varios años que venis trabajndo en el mismo lugar y ya te siente"
+							+ "\nestancado. Es hora de cambiar. Este año tiene las puertas abiertas para"
+							+ "\npara un nuevo trabajo", "Test de Personalidad",
+							JOptionPane.DEFAULT_OPTION, new ImageIcon(Ludovica_tp2.class.getResource("/img/pred2.jpg")));
+				} else if (carta==3) {
+					JOptionPane.showMessageDialog(null, "El amor"
+							+ "\nEste año se presentara el amor en tu puerta. No seas timido, esa persona"
+							+ "\nque tanto soñaste esta a la vuelta de la esquina.", "Test de Personalidad",
+							JOptionPane.DEFAULT_OPTION, new ImageIcon(Ludovica_tp2.class.getResource("/img/pred3.jpg")));
+				} else if (carta==4) {
+					JOptionPane.showMessageDialog(null, "La casa"
+							+ "\nEs momento de dar el salto a lo grande. Es un buen año para poder"
+							+ "\nexpandirte. Los nuevos aires son gratificantes", "Test de Personalidad",
+							JOptionPane.DEFAULT_OPTION, new ImageIcon(Ludovica_tp2.class.getResource("/img/pred4.jpg")));
+				} else if (carta==5) {
+					JOptionPane.showMessageDialog(null, "Los gastos"
+							+ "\nEste año que esta terminando no tuvo buenos frutos. La pandemia hizo"
+							+ "\nque estemos un poco parados. Controla tus gastos", "Test de Personalidad",
+							JOptionPane.DEFAULT_OPTION, new ImageIcon(Ludovica_tp2.class.getResource("/img/pred5.jpg")));
+				} else if (carta==6) {
+					JOptionPane.showMessageDialog(null, "La salud"
+							+ "\nEste año estuviste bastante sedentario. Deberias hacer un poco ed ejercicios."
+							+ "\nTu corazon y tu mente te lo agradeceran.", "Test de Personalidad",
+							JOptionPane.DEFAULT_OPTION, new ImageIcon(Ludovica_tp2.class.getResource("/img/pred6.jpg")));
+				}				
 		break;
 		}
 	}
